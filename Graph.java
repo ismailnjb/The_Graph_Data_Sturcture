@@ -13,13 +13,13 @@ public class Graph {
         adjList = new HashMap<>();
     }
 
-    // Add an edge from node u to node v
+
     public void addEdge(int u, int v) {
         adjList.computeIfAbsent(u, k -> new ArrayList<>()).add(v);
-        adjList.computeIfAbsent(v, k -> new ArrayList<>()).add(u);  // For undirected graph
+        adjList.computeIfAbsent(v, k -> new ArrayList<>()).add(u);  
     }
 
-    // Print the graph
+ 
     public void printGraph() {
         for (Map.Entry<Integer, List<Integer>> entry : adjList.entrySet()) {
             System.out.print(entry.getKey() + ": ");

@@ -8,13 +8,13 @@ class Graph {
 public:
     unordered_map<int, vector<int>> adjList;
 
-    // Add an edge from node u to node v
+  
     void addEdge(int u, int v) {
         adjList[u].push_back(v);
-        adjList[v].push_back(u);  // For undirected graph
+        adjList[v].push_back(u);  
     }
 
-    // Print the graph
+
     void printGraph() {
         for (const auto& pair : adjList) {
             cout << pair.first << ": ";
@@ -26,7 +26,7 @@ public:
     }
 };
 
-// Example usage
+
 int main() {
     Graph graph;
     graph.addEdge(0, 1);
